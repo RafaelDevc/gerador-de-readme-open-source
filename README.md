@@ -1,6 +1,3 @@
-Aqui está um exemplo de como você pode criar um README.md para a sua ferramenta de gerador de README em Python:
-
----
 
 # Gerador de README Automático
 
