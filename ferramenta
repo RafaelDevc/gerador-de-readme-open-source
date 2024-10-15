@@ -1,0 +1,38 @@
+# Função principal que gera o README.md
+def gerar_readme():
+    # Coletando as informações do projeto
+    nome_projeto = input("Nome do projeto: ")
+    descricao = input("Descrição do projeto: ")
+    tecnologias = input("Tecnologias usadas (separadas por vírgula): ")
+    instrucoes = input("Instruções de uso: ")
+    contribuicoes = input("Gostaria de adicionar uma seção para contribuições? (Sim/Não): ").lower()
+
+    # Gerando o conteúdo do README
+    conteudo_readme = f"""
+# {nome_projeto}
+
+## Descrição
+{descricao}
+
+## Tecnologias Utilizadas
+{tecnologias}
+
+## Como Usar
+{instrucoes}
+    """
+    
+    # Se o usuário quiser uma seção de contribuições
+    if contribuicoes == 'sim':
+        conteudo_readme += """
+## Contribuições
+Sinta-se à vontade para contribuir com o projeto! Faça um fork, crie uma branch e envie um pull request.
+        """
+    
+    # Salvando o README.md
+    with open("README.md", "w") as readme_file:
+        readme_file.write(conteudo_readme)
+
+    print("README.md gerado com sucesso!")
+
+# Executar a função
+gerar_readme()
